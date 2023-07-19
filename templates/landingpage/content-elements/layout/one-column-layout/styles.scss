@@ -1,7 +1,7 @@
 .element.layout-columns {
-  display: flex;
+    display: flex;
 
-  > .column {
-    width: 50%;
-  }
+    > .column {
+        width: 100%;
+    }
 }

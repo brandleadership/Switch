@@ -1,9 +1,37 @@
-body {
-  margin: 0;
-  padding: 0.5rem;
-}
+//general
+@import '../styles/general.scss';
 
-main {
-  display: flex;
-  flex-direction: column;
-}
+// sections
+@import '../content-elements/sections/header-with-logo/styles.scss';
+@import '../content-elements/sections/footer/styles.scss';
+@import '../content-elements/sections/form/styles.scss';
+
+// elements
+@import '../content-elements/elements/logo/styles.scss';
+@import '../content-elements/elements/blue-button/styles.scss';
+@import '../content-elements/elements/footer-address/styles.scss';
+@import '../content-elements/elements/footer-link/styles.scss';
+@import '../content-elements/elements/spacer-10/styles.scss';
+@import '../content-elements/elements/spacer-20/styles.scss';
+@import '../content-elements/elements/spacer-30/styles.scss';
+@import '../content-elements/elements/formatted-text/styles.scss';
+@import '../content-elements/elements/plain-text/styles.scss';
+@import '../content-elements/elements/title-h2/styles.scss';
+@import '../content-elements/elements/info-element/styles.scss';
+@import '../content-elements/elements/divider/styles.scss';
+@import '../content-elements/elements/info-date-element/styles.scss';
+@import '../content-elements/elements/info-ort-element/styles.scss';
+@import '../content-elements/elements/full-width-image/styles.scss';
+
+//form-elements
+@import '../content-elements/elements/form-elements/button/styles.scss';
+@import '../content-elements/elements/form-elements/checkbox/styles.scss';
+@import '../content-elements/elements/form-elements/email/styles.scss';
+@import '../content-elements/elements/form-elements/full-name/styles.scss';
+@import '../content-elements/elements/form-elements/last-name/styles.scss';
+@import '../content-elements/elements/form-elements/name/styles.scss';
+@import '../content-elements/elements/form-elements/organization/styles.scss';
+@import '../content-elements/elements/form-elements/radio-buttons/styles.scss';
+
+// layouts
+@import '../content-elements/layout/one-column-layout/styles.scss';

@@ -1,0 +1,163 @@
+:root {
+    --primary: #002864;
+    --secondary: #285f82;
+    --grey: #50555a;
+    --grey-bg: #f0f3f6;
+    --white: #ffffff;
+}
+
+* {
+    color: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Euclid Circular B';
+    background-color: #fff;
+    margin: 0;
+}
+
+main {
+    font-family: 'Euclid Circular B';
+    display: flex;
+    flex-direction: column;
+}
+
+@font-face {
+    font-family: 'Euclid Circular B';
+    src: url('../../../resources/fonts/EuclidCircularB-Medium-WebXL.woff')
+            format('woff'),
+        url('../../../resources/fonts/EuclidCircularB-Medium-WebXL.woff2')
+            format('woff2'),
+        url('../../../resources/fonts/EuclidCircularB-Regular-WebXL.woff')
+            format('woff'),
+        url('../../../resources/fonts/EuclidCircularB-Regular-WebXL.woff2')
+            format('woff2'),
+        url('../../../resources/fonts/EuclidCircularB-Semibold-WebXL.woff')
+            format('woff'),
+        url('../../../resources/fonts/EuclidCircularB-Semibold-WebXL.woff2')
+            format('woff2');
+}
+
+@font-face {
+    font-family: 'Euclid Circular B';
+    src: url('../../../resources/fonts/EuclidCircularB-Regular-WebXL.woff')
+            format('woff'),
+        url('../../../resources/fonts/EuclidCircularB-Regular-WebXL.woff2')
+            format('woff2');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Euclid Circular B';
+    src: url('../../../resources/fonts/EuclidCircularB-Medium-WebXL.woff')
+            format('woff'),
+        url('../../../resources/fonts/EuclidCircularB-Medium-WebXL.woff2')
+            format('woff2');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Euclid Circular B';
+    src: url('../../../resources/fonts/EuclidCircularB-Semibold-WebXL.woff')
+            format('woff'),
+        url('../../../resources/fonts/EuclidCircularB-Semibold-WebXL.woff2')
+            format('woff2');
+    font-weight: 600;
+}
+
+.section-spacer {
+    margin-bottom: 60px;
+}
+
+//content container
+.content-container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+}
+
+//main container
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+}
+
+@media (min-width: 834px) {
+    .container {
+        margin-right: auto;
+        margin-left: auto;
+        width: 90%;
+    }
+
+    .section-spacer {
+        margin-bottom: 60px;
+    }
+    .content-container {
+        margin-right: auto;
+        margin-left: auto;
+        width: 70%;
+    }
+}
+
+@media (min-width: 1024) {
+    .container {
+        margin-right: auto;
+        margin-left: auto;
+        width: 90%;
+    }
+    .section-spacer {
+        margin-bottom: 60px;
+    }
+
+    .content-container {
+        margin-right: auto;
+        margin-left: auto;
+        width: 70%;
+    }
+}
+
+@media (min-width: 1025px) {
+    .container {
+        margin-right: auto;
+        margin-left: auto;
+        width: 80%;
+    }
+    .section-spacer {
+        margin-bottom: 80px;
+    }
+
+    .content-container {
+        margin-right: auto;
+        margin-left: auto;
+        width: 60%;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        margin-right: auto;
+        margin-left: auto;
+        width: 80%;
+    }
+    .section-spacer {
+        margin-bottom: 80px;
+    }
+
+    .content-container {
+        margin-right: auto;
+        margin-left: auto;
+        width: 40%;
+    }
+}

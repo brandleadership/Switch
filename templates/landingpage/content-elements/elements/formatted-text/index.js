@@ -1,12 +1,14 @@
-const { cx, Icon } = require("@bsi-cx/design-build");
+const { cx, Icon } = require('@bsi-cx/design-build');
 
 module.exports = cx.contentElement
-  .withElementId("body-text")
-  .withIcon(Icon.TEXT)
-  .withLabel("Text")
-  .withFile(require("./template.twig"))
-  .withParts(
-    cx.part.plainText
-      .withId("e3b03b5a-7882-4ed5-8683-d811f488b663")
-      .withLabel("Text")
-  );
+    .withElementId('body-text')
+    .withIcon(Icon.TEXT)
+    .withLabel('Text')
+    .withFile(require('./template.twig'))
+    .withParts(
+        cx.part.formattedText
+            .withLabel('Formatted Text')
+            .withHtmlEditorConfig(
+                require('../../../configs/editor/formatted-text-config.js')
+            )
+    );

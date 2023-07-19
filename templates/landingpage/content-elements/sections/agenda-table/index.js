@@ -1,12 +1,16 @@
-const { cx, Icon } = require("@bsi-cx/design-build");
+const { cx, Icon } = require('@bsi-cx/design-build');
 
 module.exports = cx.contentElement
-  .withElementId("agenda-table")
-  .withIcon(Icon.TEXT)
-  .withLabel("Text")
-  .withFile(require("./template.twig"))
-  .withParts(
-    cx.part.plainText
-      .withId("e3b03b5a-7882-4ed5-8683-d811f488b663")
-      .withLabel("Text")
-  );
+    .withElementId('agenda-table')
+    .withIcon(Icon.LIST)
+    .withLabel('Agenda Table')
+    .withFile(require('./template.twig'))
+    .withDropzones(
+        cx.dropzone
+            .withDropzone('agenda-elements')
+            .withAllowedElements(
+                require('../../elements/info-element'),
+                require('../../elements/divider'),
+                require('../../elements/title-h2')
+            )
+    );

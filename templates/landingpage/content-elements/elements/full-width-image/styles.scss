@@ -1,0 +1,29 @@
+.image-full-width-wrapper {
+    width: 100%;
+}
+
+.image-banner {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .image-full-width-wrapper {
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .image-full-width-wrapper {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    .image-full-width-wrapper {
+        width: 996px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

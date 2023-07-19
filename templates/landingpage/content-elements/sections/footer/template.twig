@@ -1,3 +1,44 @@
-<div data-bsi-element="footer" >
-
+<div data-bsi-element="footer" class="footer-container">
+    <div class="container">
+        <div class="inner_footer-wrapper">
+            <div class="footer-logo-address-wrapper">
+                <div class="footer-logo-wrapper">
+                    <div class="footer-logo">
+                        <img alt=""
+                            src="{{
+                            bsi_cx_asset(
+                                '../../../../../resources/images/logo-white.svg'
+                            )
+                            }}"
+                            width="148" />
+                    </div>
+                </div>
+                <div class="footer-address-box"
+                    data-bsi-dropzone="footer-address"
+                    data-bsi-dropzone-allowed-elements="footer-address">
+                    {% include '../../elements/footer-address/template.twig' %}
+                    {% include '../../elements/footer-address/template.twig' %}
+                </div>
+            </div>
+            <div class="footer-links-wrapper"
+                data-bsi-dropzone="footer-links"
+                data-bsi-dropzone-allowed-elements="footer-link body-text">
+                {% include '../../elements/formatted-text/template.twig' with {
+                    text: '© {year} für Inhalte bei Switch'
+                } %}
+                {% include '../../elements/footer-link/template.twig' with {
+                    href: [Rechtliches],
+                    link_text: 'Rechtliches'
+                } %}
+                {% include '../../elements/footer-link/template.twig' with {
+                    href: [Impressum],
+                    link_text: 'Impressum'
+                } %}
+                {% include '../../elements/footer-link/template.twig' with {
+                    href: [Datenschutz],
+                    link_text: 'Datenschutz'
+                } %}
+            </div>
+        </div>
+    </div>
 </div>

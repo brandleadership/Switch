@@ -1,12 +1,18 @@
-const { cx, Icon } = require("@bsi-cx/design-build");
+const { cx, Icon } = require('@bsi-cx/design-build');
 
 module.exports = cx.contentElement
-  .withElementId("info-table")
-  .withIcon(Icon.TEXT)
-  .withLabel("Text")
-  .withFile(require("./template.twig"))
-  .withParts(
-    cx.part.plainText
-      .withId("e3b03b5a-7882-4ed5-8683-d811f488b663")
-      .withLabel("Text")
-  );
+    .withElementId('info-table')
+    .withIcon(Icon.LIST)
+    .withLabel('Info Table')
+    .withFile(require('./template.twig'))
+    .withDropzones(
+        cx.dropzone
+            .withDropzone('info-table-block')
+            .withAllowedElements(
+                require('../../elements/info-element'),
+                require('../../elements/info-ort-element'),
+                require('../../elements/info-date-element'),
+                require('../../elements/divider'),
+                require('../../elements/title-h2')
+            )
+    );
