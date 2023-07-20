@@ -12,7 +12,7 @@ const landingpageBuildConfig = new BuildConfig()
     .withName('Switch-LP')
     .withVersion('1.0.0')
     .withDesignType(DesignType.LANDINGPAGE)
-    .withTargetVersion(Version.CX_1_3)
+    .withTargetVersion(Version.CX_22_0)
     .withRootPath(path.resolve(__dirname, 'templates', 'landingpage'))
     .withPropertiesFilePath('properties.js')
     .withModules(new ModuleConfig().withName('main').withPath('main.js'));

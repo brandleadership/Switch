@@ -13,6 +13,7 @@ module.exports = cx.contentElement
                 require('../../elements/spacer-20'),
                 require('../../elements/spacer-10'),
                 require('../../elements/spacer-30'),
-                require('../../elements/formatted-text')
+                require('../../elements/formatted-text'),
+                require('../../elements/blue-button')
             )
     );
