@@ -225,6 +225,12 @@ input::placeholder {
     transition: opacity 0.3s linear 0s;
 }
 
+.text-field::placeholder:required::after {
+    content: '*';
+    color: var(--primary);
+    padding-left: 5px;
+}
+
 .text-field input:focus {
     outline: none;
 }

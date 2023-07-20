@@ -16,8 +16,16 @@
                 <div class="footer-address-box"
                     data-bsi-dropzone="footer-address"
                     data-bsi-dropzone-allowed-elements="footer-address">
-                    {% include '../../elements/footer-address/template.twig' %}
-                    {% include '../../elements/footer-address/template.twig' %}
+                    {% include '../../elements/footer-address/template.twig' with {
+                        text: 'Zürich
+Werdstrasse 2
+8004 Zürich'
+                    } %}
+                    {% include '../../elements/footer-address/template.twig' with {
+                        text: 'Laussane
+Werdstrasse 2
+8004 Zürich'
+                    }%}
                 </div>
             </div>
             <div class="footer-links-wrapper"
