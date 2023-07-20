@@ -17,12 +17,14 @@
     margin: 0;
     padding: 0;
 }
-html,
+
 body {
     font-family: 'Euclid Circular B';
     margin: 0;
     padding: 0;
-    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 main {
@@ -72,6 +74,10 @@ main {
         url('../../../resources/fonts/EuclidCircularB-Semibold-WebXL.woff2')
             format('woff2');
     font-weight: 600;
+}
+
+.main-content-container {
+    flex: 1 0 auto;
 }
 
 .section-spacer {
