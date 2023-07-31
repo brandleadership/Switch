@@ -25,5 +25,13 @@ module.exports = WebpackConfigBuilder.fromConfigs(
     landingpageBuildConfig
         .clone()
         .withName('Switch-lp-en-cx-22.0')
-        .withPropertiesFilePath('lang-en.js')
+        .withPropertiesFilePath('lang-en.js'),
+    landingpageBuildConfig
+        .clone()
+        .withName('Switch-lp-fr-cx-22.0')
+        .withPropertiesFilePath('lang-fr.js'),
+    landingpageBuildConfig
+        .clone()
+        .withName('Switch-lp-it-cx-22.0')
+        .withPropertiesFilePath('lang-it.js')
 );

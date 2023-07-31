@@ -32,19 +32,19 @@ Werdstrasse 2
                 data-bsi-dropzone="footer-links"
                 data-bsi-dropzone-allowed-elements="footer-link body-text">
                 {% include '../../elements/formatted-text/template.twig' with {
-                    text: '© {year} für Inhalte bei Switch'
+                    text: properties.footer.year
                 } %}
                 {% include '../../elements/footer-link/template.twig' with {
                     href: [Rechtliches],
-                    link_text: 'Rechtliches'
+                    link_text: properties.footer.rechtliches
                 } %}
                 {% include '../../elements/footer-link/template.twig' with {
                     href: [Impressum],
-                    link_text: 'Impressum'
+                    link_text: properties.footer.impressum
                 } %}
                 {% include '../../elements/footer-link/template.twig' with {
                     href: [Datenschutz],
-                    link_text: 'Datenschutz'
+                    link_text: properties.footer.datenschutz
                 } %}
             </div>
         </div>

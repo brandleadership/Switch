@@ -20,8 +20,7 @@
             {% include '../../elements/form-elements/email/template.twig' %}
             {% include '../../elements/form-elements/organization/template.twig' %} 
              {% include '../../elements/form-elements/checkbox/template.twig' with {
-                text: 'Ich habe die [Nutzungsbedingungen] und die [Datenschutzerklärung] 
-                gelesen und erkläre mich damit einvestanden'
+                text: properties.labels.checkbox
             } %}
             
             </div>
@@ -33,7 +32,7 @@
                 <input data-bsi-part="form-submit"
                     class="submit-button"
                     type="submit"
-                    value="Senden" />
+                    value="{{properties.labels.anmelden}}" />
             </div>
         </div>
     </form>
