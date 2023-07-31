@@ -15,7 +15,16 @@ const landingpageBuildConfig = new BuildConfig()
     .withTargetVersion(Version.CX_22_0)
     .withRootPath(path.resolve(__dirname, 'templates', 'landingpage'))
     .withPropertiesFilePath('properties.js')
-    .withModules(new ModuleConfig().withName('main').withPath('main.js'));
+    .withModules(new ModuleConfig().withName('main').withPath('main.js'))
+    .withAdditionalFilesToCopy({
+        from: path.resolve(
+            __dirname,
+            'templates',
+            'landingpage',
+            'preview.png'
+        ),
+        to: 'static/preview.png',
+    });
 
 module.exports = WebpackConfigBuilder.fromConfigs(
     landingpageBuildConfig

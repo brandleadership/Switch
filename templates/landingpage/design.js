@@ -6,6 +6,7 @@ module.exports = cx.design
     .withTitle('Switch-LP')
     .withAuthor('BSI Business Systems Integration AG')
     .withDate('20.05.2022')
+    .withPreviewImage('static/preview.png')
     .withDefaultLocale(Locale.EN)
     .withLocales(Locale.EN, Locale.DE)
     .withContentElementGroups(
