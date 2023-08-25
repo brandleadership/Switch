@@ -5,6 +5,13 @@
 .image-banner {
     width: 100%;
 }
+.image-description {
+    margin-top: 16px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--primary);
+}
 
 @media (min-width: 768px) {
     .image-full-width-wrapper {

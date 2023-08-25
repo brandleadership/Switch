@@ -11,6 +11,7 @@ module.exports = cx.contentElement
             .withAllowedElements(
                 require('../../elements/info-element'),
                 require('../../elements/divider'),
-                require('../../elements/title-h2')
+                require('../../elements/title-h2'),
+                require('../../elements/info-element-three-col')
             )
     );

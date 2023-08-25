@@ -6,6 +6,10 @@ input[type='checkbox'] {
 
 /* correctly align content */
 
+.checkbox-wrapper {
+    position: relative;
+}
+
 .custom-checkbox-container {
     display: flex;
     flex-direction: row-reverse;
@@ -17,9 +21,9 @@ input[type='checkbox'] {
 
 .custom-checkbox-container label {
     width: calc(100% - 10px);
-    padding-left: 30px;
+    padding-left: 50px;
     z-index: 2;
-    margin-left: -15px;
+    margin-left: -28px;
     font-size: 13px;
 }
 

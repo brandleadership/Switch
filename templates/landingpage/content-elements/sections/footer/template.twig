@@ -31,19 +31,19 @@ Werdstrasse 2
             <div class="footer-links-wrapper"
                 data-bsi-dropzone="footer-links"
                 data-bsi-dropzone-allowed-elements="footer-link body-text">
-                {% include '../../elements/formatted-text/template.twig' with {
+                {% include '../../elements/footer-copyright/template.twig' with {
                     text: properties.footer.year
                 } %}
                 {% include '../../elements/footer-link/template.twig' with {
-                    href: [Rechtliches],
+                    href: '[Rechtliches]',
                     link_text: properties.footer.rechtliches
                 } %}
                 {% include '../../elements/footer-link/template.twig' with {
-                    href: [Impressum],
+                    href: '[Impressum]',
                     link_text: properties.footer.impressum
                 } %}
                 {% include '../../elements/footer-link/template.twig' with {
-                    href: [Datenschutz],
+                    href: '[Datenschutz]',
                     link_text: properties.footer.datenschutz
                 } %}
             </div>

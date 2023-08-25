@@ -37,14 +37,16 @@ label a {
 
 input[type='text']:required ~ label::after,
 input[type='number']:required ~ label::after,
-input[type='email']:required ~ label::after {
+input[type='email']:required ~ label::after,
+select:required ~ label::after {
     content: '*';
     color: var(--primary);
 }
 
 input[type='text'],
 input[type='number'],
-input[type='email'] {
+input[type='email'],
+select {
     border-radius: 3px;
     border-bottom: 1px solid var(--primary);
     border-top: transparent;
@@ -56,6 +58,17 @@ input[type='email'] {
 }
 
 /* increased padding for select to have same appearance as input fields */
+select {
+    padding: 10px 10px;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+select:hover {
+    cursor: pointer;
+}
 
 *:-moz-focusring {
     outline: none;
@@ -70,6 +83,14 @@ input[type='email'] {
 input:not([type='submit']) {
     border-bottom: 1px solid var(--primary);
     height: 40px;
+}
+
+select {
+    height: 40px;
+    border: 1px solid rgba(20, 30, 85, 0.3);
+    &.red-border-select {
+        border: 1px solid red;
+    }
 }
 
 label .formatted-text {
@@ -186,6 +207,29 @@ label {
     display: none;
 }
 
+.error-message-checkbox {
+    position: absolute;
+    color: red;
+    font-size: 12px;
+    bottom: -20px;
+}
+
+.error-message-checkbox.isVisible {
+    display: none;
+}
+
+.error-message-select {
+    display: block;
+    position: absolute;
+    color: red;
+    font-size: 12px;
+    bottom: -10px;
+}
+
+.error-message-select.isVisible {
+    display: none;
+}
+
 input[type='checkbox'].missing-required-field ~ .custom-checkbox-frame {
     border: 1px solid red;
 }
@@ -231,7 +275,9 @@ input::placeholder {
     padding-left: 5px;
 }
 
-.text-field input:focus {
+.text-field input:focus,
+.text-field textarea:focus,
+.text-field select:focus {
     outline: none;
 }
 
@@ -250,7 +296,9 @@ input::placeholder {
     transition: opacity 0.3s linear 0s;
 }
 
-.text-field input:focus ~ label {
+.text-field input:focus ~ label,
+.text-field textarea:focus ~ label,
+.text-field select:focus ~ label {
     opacity: 1;
     transition: opacity 0.3s ease-in 0s;
 }
@@ -291,11 +339,29 @@ input[type='checkbox'] {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* assure that checkbox is clickable (place below label) */
     z-index: 1;
     &.missing-required-field {
         border: 1px solid red;
     }
+}
+.custom-select {
+    border: 1px solid var(--primary);
+}
+
+.dropdown-select option {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--primary);
+}
+
+.dropdown-select option.default-option {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--primary);
 }
 
 .custom-checkbox-container label:hover ~ .custom-checkbox-frame {
@@ -312,6 +378,23 @@ input[type='checkbox'] {
     display: none;
     /* to assure that checkbox is clickable (place below label) also when checked */
     z-index: 1;
+}
+
+.dropdown-text {
+    text-align: left;
+    margin-bottom: 34px;
+}
+
+.dropdown-text p {
+    font-family: VerlagSSm, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 26px;
+    line-height: 1.625rem;
+    color: var(--primary);
+    margin-top: 0;
 }
 
 .custom-checkbox-container input:checked ~ .custom-checkbox-frame::after {
@@ -373,7 +456,6 @@ input[type='radio'] {
     justify-content: center;
     flex-direction: row;
     align-items: center;
-    /* assure that radiobutton is clickable (place below label) */
     z-index: 1;
 }
 
@@ -433,12 +515,6 @@ input[type='radio'] {
 
 .custom-radiobutton-container label {
     padding-left: 30px;
-    /* In BSI, the label cannot wrap around the input element,
-as it is traditionally done when using custom radiobutton for optimal
-UX + styling. Hence, we have to position the radiobutton label
-above the .custom-radiobutton-frame; otherwise the radiobutton would
-not be directly clickable */
-    /* to assure that checkbox is always clickable (place label above) */
     z-index: 2;
     margin-left: -15px;
 }
@@ -456,7 +532,6 @@ not be directly clickable */
     border: 1px solid var(--primary);
     display: flex;
     justify-content: center;
-    /* assure that radiobutton is clickable (place below label) */
     z-index: 1;
     width: 100%;
     height: 100%;

@@ -1,0 +1,25 @@
+<div data-bsi-element="dropdown" style="padding-bottom: 15px;">
+    <div data-bsi-element-part="form-select"
+        id="dropdown-wrapper"
+        data-bsi-value-list=""
+        class="reverse-for-required text-field form-dropdown dropdown-wrapper"
+          data-bsi-value="">
+        <select id="dropdown-select"
+            data-translation="{{ properties.select_option }}"
+            name="dropdown-select"
+            class="custom-select custom-form-field dropdown-select"
+            spellcheck="false"
+            required="">
+                <option value="">
+                  
+                </option>
+    
+        </select>
+        <div class="error-message-select isVisible">
+                     {{properties.select_error}}
+            </div>
+        <label for="dropdown-select">
+          {{ properties.labels.select_label }}
+        </label>
+    </div>
+</div>

@@ -1,6 +1,6 @@
-<div data-bsi-element="checkbox" style="padding-bottom: 15px;">
+<div data-bsi-element="checkbox" style="padding-bottom: 15px;" >
     <div data-bsi-element-part="form-checkbox"
-        class="custom-checkbox-container"
+        class="custom-checkbox-container checkbox-wrapper"
         data-bsi-form-field-fixed-type=""
         class="checkbox-wrapper">
         <input id="checkbox-id"
@@ -11,5 +11,9 @@
             spellchecker="true" />
         <label for="checkbox-id" class="formatted-text">{{ text }}</label>
         <span class="custom-checkbox-frame"></span>
+           <div class="error-message-checkbox isVisible">
+        {{properties.checkbox_error}}
+        </div>
     </div>
+   
 </div>

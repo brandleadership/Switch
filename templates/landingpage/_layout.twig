@@ -69,11 +69,11 @@
             {% block footer %}
             {% endblock %}
         </footer>
-
+<script data-bsi-remove-if="draft" src="{{ bsi_cx_js_module_href('main') }}"></script>
         <script src="{{ bsi_cx_js_module_runtime_href() }}"
             defer="defer"></script>
-        <script src="{{ bsi_cx_js_module_href('main') }}"
-            defer="defer"></script>
+        {# <script src="{{ bsi_cx_js_module_href('main') }}"
+            defer="defer"></script> #}
         {{ bsi_cx_js_module_missing_chunks_import() }}
     </body>
 </html>

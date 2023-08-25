@@ -19,6 +19,14 @@ const organizationWrapper = document.querySelector('.firm-wrapper');
 const organization = document.querySelector('.firm');
 const checkboxWrapper = document.querySelector('.checkbox-wrapper');
 const checkbox = document.getElementsByClassName('checkbox-input')[0];
+const checkboxError = checkboxWrapper?.getElementsByClassName(
+    'error-message-checkbox'
+)[0];
+const dropdownSelectWrapper = document.querySelector('.dropdown-wrapper');
+const dropdownSelect = document.querySelector('.dropdown-select');
+const dropdownError = dropdownSelectWrapper?.getElementsByClassName(
+    'error-message-select'
+)[0];
 
 function verifyFields(event) {
     event.preventDefault();
@@ -28,13 +36,15 @@ function verifyFields(event) {
     const isLastName = verifyLastName();
     const isCheckbox = verifyCheckbox();
     const isOrganization = verifyOrganization();
+    const isDropdownSelect = verifyDropdownSelect();
     if (
         isRadioBTNVerticalTrue &&
         isEmailTrue &&
         isName &&
         isLastName &&
         isCheckbox &&
-        isOrganization
+        isOrganization &&
+        isDropdownSelect
     ) {
         submissionForms?.submit();
         setTimeout(() => {
@@ -42,6 +52,21 @@ function verifyFields(event) {
         }, 300);
     } else {
         // submissionFormsError.classList.remove('isVisible');
+    }
+}
+
+function verifyDropdownSelect() {
+    if (!dropdownSelect) {
+        return true;
+    }
+    if (dropdownSelect.required && dropdownSelect.value === '') {
+        dropdownSelect?.classList.add('red-border-select');
+        dropdownError?.classList.remove('isVisible');
+        return false;
+    } else {
+        dropdownSelect?.classList.remove('red-border-select');
+        dropdownError?.classList.add('isVisible');
+        return true;
     }
 }
 
@@ -129,13 +154,26 @@ function verifyCheckbox() {
         return true;
     }
     if (checkbox.required && !checkbox.checked) {
+        checkboxError?.classList.remove('isVisible');
         checkbox.classList.add('missing-required-field');
         return false;
     } else {
         checkbox.classList.remove('missing-required-field');
+        checkboxError?.classList.add('isVisible');
         return true;
     }
 }
+
+dropdownSelect?.addEventListener('change', event => {
+    const target = event.target.value;
+    if (target) {
+        dropdownError.classList.add('isVisible');
+        dropdownSelect.classList.remove('red-border-select');
+    } else {
+        dropdownError.classList.remove('isVisible');
+        dropdownSelect.classList.add('red-border-select');
+    }
+});
 
 email?.addEventListener('input', event => {
     const target = event.target;
@@ -181,8 +219,10 @@ checkbox?.addEventListener('change', event => {
     const isCheckboxChecked = checkbox.checked;
 
     if (isCheckboxChecked) {
+        checkboxError.classList.add('isVisible');
         checkbox.classList.remove('missing-required-field');
     } else {
+        checkboxError.classList.remove('isVisible');
         checkbox.classList.add('missing-required-field');
     }
 });

@@ -1,0 +1,16 @@
+.footer-copyright-container {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+.svg-wrapper img {
+    display: block;
+    margin-right: 4px;
+}
+
+.footer-copyright-text {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 18px;
+}

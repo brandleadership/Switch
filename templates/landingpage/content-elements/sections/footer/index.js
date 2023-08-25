@@ -13,6 +13,7 @@ module.exports = cx.contentElement
             .withDropzone('footer-links')
             .withAllowedElements(
                 require('../../elements/footer-link'),
-                require('../../elements/formatted-text')
+                require('../../elements/formatted-text'),
+                require('../../elements/footer-copyright')
             )
     );

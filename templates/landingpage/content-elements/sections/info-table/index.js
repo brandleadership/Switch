@@ -10,6 +10,7 @@ module.exports = cx.contentElement
             .withDropzone('info-table-block')
             .withAllowedElements(
                 require('../../elements/info-element'),
+                require('../../elements/info-element-three-col'),
                 require('../../elements/info-ort-element'),
                 require('../../elements/info-date-element'),
                 require('../../elements/divider'),
