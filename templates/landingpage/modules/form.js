@@ -22,11 +22,11 @@ const checkbox = document.getElementsByClassName('checkbox-input')[0];
 const checkboxError = checkboxWrapper?.getElementsByClassName(
     'error-message-checkbox'
 )[0];
-const dropdownSelectWrapper = document.querySelector('.dropdown-wrapper');
-const dropdownSelect = document.querySelector('.dropdown-select');
-const dropdownError = dropdownSelectWrapper?.getElementsByClassName(
-    'error-message-select'
-)[0];
+// const dropdownSelectWrapper = document.querySelector('.dropdown-wrapper');
+// const dropdownSelect = document.querySelector('.dropdown-select');
+// const dropdownError = dropdownSelectWrapper?.getElementsByClassName(
+//     'error-message-select'
+// )[0];
 
 function verifyFields(event) {
     event.preventDefault();
@@ -36,15 +36,15 @@ function verifyFields(event) {
     const isLastName = verifyLastName();
     const isCheckbox = verifyCheckbox();
     const isOrganization = verifyOrganization();
-    const isDropdownSelect = verifyDropdownSelect();
+    //const isDropdownSelect = verifyDropdownSelect();
     if (
         isRadioBTNVerticalTrue &&
         isEmailTrue &&
         isName &&
         isLastName &&
         isCheckbox &&
-        isOrganization &&
-        isDropdownSelect
+        isOrganization
+        //isDropdownSelect
     ) {
         submissionForms?.submit();
         setTimeout(() => {
@@ -55,20 +55,20 @@ function verifyFields(event) {
     }
 }
 
-function verifyDropdownSelect() {
-    if (!dropdownSelect) {
-        return true;
-    }
-    if (dropdownSelect.required && dropdownSelect.value === '') {
-        dropdownSelect?.classList.add('red-border-select');
-        dropdownError?.classList.remove('isVisible');
-        return false;
-    } else {
-        dropdownSelect?.classList.remove('red-border-select');
-        dropdownError?.classList.add('isVisible');
-        return true;
-    }
-}
+// function verifyDropdownSelect() {
+//     if (!dropdownSelect) {
+//         return true;
+//     }
+//     if (dropdownSelect.required && dropdownSelect.value === '') {
+//         dropdownSelect?.classList.add('red-border-select');
+//         dropdownError?.classList.remove('isVisible');
+//         return false;
+//     } else {
+//         dropdownSelect?.classList.remove('red-border-select');
+//         dropdownError?.classList.add('isVisible');
+//         return true;
+//     }
+// }
 
 function verifyRadioBtnVertical() {
     if (!radioButtonsVertical) {
@@ -164,16 +164,16 @@ function verifyCheckbox() {
     }
 }
 
-dropdownSelect?.addEventListener('change', event => {
-    const target = event.target.value;
-    if (target) {
-        dropdownError.classList.add('isVisible');
-        dropdownSelect.classList.remove('red-border-select');
-    } else {
-        dropdownError.classList.remove('isVisible');
-        dropdownSelect.classList.add('red-border-select');
-    }
-});
+// dropdownSelect?.addEventListener('change', event => {
+//     const target = event.target.value;
+//     if (target) {
+//         dropdownError.classList.add('isVisible');
+//         dropdownSelect.classList.remove('red-border-select');
+//     } else {
+//         dropdownError.classList.remove('isVisible');
+//         dropdownSelect.classList.add('red-border-select');
+//     }
+// });
 
 email?.addEventListener('input', event => {
     const target = event.target;

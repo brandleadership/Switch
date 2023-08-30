@@ -43,7 +43,7 @@ module.exports = cx.design
                 require('./content-elements/elements/spacer-20'),
                 require('./content-elements/elements/spacer-30'),
                 require('./content-elements/elements/info-element'),
-                require('./content-elements/elements/info-element-three-col'),
+                //require('./content-elements/elements/info-element-three-col'),
                 require('./content-elements/elements/full-width-image'),
                 require('./content-elements/elements/divider'),
                 require('./content-elements/elements/info-ort-element'),
@@ -53,15 +53,14 @@ module.exports = cx.design
             .withGroupId('form-elements')
             .withLabel('Form Elements')
             .withContentElements(
-                // require('./content-elements/elements/form-elements/button'),
                 require('./content-elements/elements/form-elements/checkbox'),
                 require('./content-elements/elements/form-elements/email'),
                 require('./content-elements/elements/form-elements/full-name'),
                 require('./content-elements/elements/form-elements/organization'),
                 require('./content-elements/elements/form-elements/radio-buttons'),
                 require('./content-elements/elements/form-elements/name'),
-                require('./content-elements/elements/form-elements/last-name'),
-                require('./content-elements/elements/form-elements/dropdown')
+                require('./content-elements/elements/form-elements/last-name')
+                //require('./content-elements/elements/form-elements/dropdown')
             )
     )
     .withDropzones(
@@ -70,24 +69,24 @@ module.exports = cx.design
             .withAllowedElements(
                 require('./content-elements/sections/header-with-logo')
             ),
-        cx.dropzone.withDropzone('main').withAllowedElements(
-            require('./content-elements/elements/blue-button'),
-            require('./content-elements/sections/form'),
-            require('./content-elements/layout/one-column-layout'),
-            require('./content-elements/elements/spacer-10'),
-            require('./content-elements/elements/spacer-20'),
-            require('./content-elements/elements/spacer-30'),
-            require('./content-elements/elements/formatted-text'),
-            require('./content-elements/elements/plain-text'),
-            require('./content-elements/elements/title-h2'),
-            require('./content-elements/sections/agenda-table'),
-            require('./content-elements/sections/info-table'),
-            // require('./content-elements/elements/info-ort-element'),
-            // require('./content-elements/elements/info-date-element'),
-            require('./content-elements/elements/full-width-image'),
-            require('./content-elements/elements/divider'),
-            require('./content-elements/sections/section-title-text')
-        ),
+        cx.dropzone
+            .withDropzone('main')
+            .withAllowedElements(
+                require('./content-elements/elements/blue-button'),
+                require('./content-elements/sections/form'),
+                require('./content-elements/layout/one-column-layout'),
+                require('./content-elements/elements/spacer-10'),
+                require('./content-elements/elements/spacer-20'),
+                require('./content-elements/elements/spacer-30'),
+                require('./content-elements/elements/formatted-text'),
+                require('./content-elements/elements/plain-text'),
+                require('./content-elements/elements/title-h2'),
+                require('./content-elements/sections/agenda-table'),
+                require('./content-elements/sections/info-table'),
+                require('./content-elements/elements/full-width-image'),
+                require('./content-elements/elements/divider'),
+                require('./content-elements/sections/section-title-text')
+            ),
         cx.dropzone
             .withDropzone('footer')
             .withAllowedElements(require('./content-elements/sections/footer'))

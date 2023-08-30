@@ -16,7 +16,7 @@ module.exports = cx.contentElement
             require('../../elements/form-elements/organization'),
             require('../../elements/form-elements/name'),
             require('../../elements/form-elements/last-name'),
-            require('../../elements/form-elements/dropdown'),
+            //require('../../elements/form-elements/dropdown'),
             require('../../elements/formatted-text'),
             require('../../elements/title-h2'),
             require('../../elements/spacer-20'),

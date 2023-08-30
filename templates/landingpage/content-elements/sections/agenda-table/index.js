@@ -6,12 +6,10 @@ module.exports = cx.contentElement
     .withLabel('Agenda Table')
     .withFile(require('./template.twig'))
     .withDropzones(
-        cx.dropzone
-            .withDropzone('agenda-elements')
-            .withAllowedElements(
-                require('../../elements/info-element'),
-                require('../../elements/divider'),
-                require('../../elements/title-h2'),
-                require('../../elements/info-element-three-col')
-            )
+        cx.dropzone.withDropzone('agenda-elements').withAllowedElements(
+            require('../../elements/info-element'),
+            require('../../elements/divider'),
+            require('../../elements/title-h2')
+            //require('../../elements/info-element-three-col')
+        )
     );
