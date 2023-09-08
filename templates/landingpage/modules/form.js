@@ -36,6 +36,12 @@ function verifyFields(event) {
     const isLastName = verifyLastName();
     const isCheckbox = verifyCheckbox();
     const isOrganization = verifyOrganization();
+    console.log(isEmailTrue, 'isEmailTrue');
+    console.log(isRadioBTNVerticalTrue, 'isRadioBTNVerticalTrue');
+    console.log(isName, 'isName');
+    console.log(isLastName, 'isLastName');
+    console.log(isCheckbox, 'isCheckbox');
+    console.log(isOrganization, 'isOrganization');
     //const isDropdownSelect = verifyDropdownSelect();
     if (
         isRadioBTNVerticalTrue &&
@@ -46,10 +52,10 @@ function verifyFields(event) {
         isOrganization
         //isDropdownSelect
     ) {
-        submissionForms?.submit();
-        setTimeout(() => {
-            submissionForms?.reset();
-        }, 300);
+        submissionForms.submit();
+        // setTimeout(() => {
+        //     submissionForms?.reset();
+        // }, 300);
     } else {
         // submissionFormsError.classList.remove('isVisible');
     }
@@ -75,22 +81,16 @@ function verifyRadioBtnVertical() {
         return true;
     }
 
-    const isRequired = Array.from(radioButtonsVertical).some(radioBtn =>
-        radioBtn.hasAttribute('required')
+    const isChecked = Array.from(radioButtonsVertical).some(
+        radioBtn => radioBtn.checked
     );
 
-    if (isRequired) {
-        const isChecked = Array.from(radioButtonsVertical).some(
-            radioBtn => radioBtn.checked
-        );
-
-        if (!isChecked) {
-            radioErrorVertical?.classList.remove('isVisible');
-            return false;
-        } else {
-            radioErrorVertical?.classList.add('isVisible');
-            return true;
-        }
+    if (!isChecked) {
+        radioErrorVertical?.classList.remove('isVisible');
+        return false;
+    } else {
+        radioErrorVertical?.classList.add('isVisible');
+        return true;
     }
 }
 
@@ -233,16 +233,8 @@ radioButtonsVertical?.forEach(radioBtn => {
     });
 });
 
-function Submit() {
-    if (!submissionForms) {
-        return;
-    } else {
-        document
-            .querySelector('.submission-form input[type="submit"]')
-            .addEventListener('click', function(event) {
-                verifyFields(event);
-            });
-    }
-}
-
-Submit();
+document
+    .querySelector('.submission-form input[type="submit"]')
+    .addEventListener('click', function(event) {
+        verifyFields(event);
+    });

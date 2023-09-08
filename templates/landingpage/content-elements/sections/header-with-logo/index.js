@@ -5,6 +5,13 @@ module.exports = cx.contentElement
     .withIcon(Icon.TEXT)
     .withLabel('Header')
     .withFile(require('./template.twig'))
+    .withParts(
+        cx.part.formattedText
+            .withLabel('Formatted Text')
+            .withHtmlEditorConfig(
+                require('../../../configs/editor/formatted-text-config.js')
+            )
+    )
     .withDropzones(
         cx.dropzone
             .withDropzone('logo-header')

@@ -5,6 +5,7 @@ module.exports = cx.contentElement
     .withIcon(Icon.TEXT)
     .withLabel('Footer')
     .withFile(require('./template.twig'))
+    .withParts(cx.part.image.withLabel('Logo Website Link'))
     .withDropzones(
         cx.dropzone
             .withDropzone('footer-address')
