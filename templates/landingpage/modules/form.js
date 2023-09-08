@@ -76,20 +76,78 @@ function verifyFields(event) {
 //     }
 // }
 
+// function verifyRadioBtnVertical() {
+//     if (!radioWrapperVertical) {
+//         return true;
+//     }
+
+//     const isChecked = Array.from(radioButtonsVertical).some(
+//         radioBtn => radioBtn.checked
+//     );
+
+//     if (!isChecked) {
+//         radioErrorVertical?.classList.remove('isVisible');
+//         return false;
+//     } else {
+//         radioErrorVertical?.classList.add('isVisible');
+//         return true;
+//     }
+// }
+
+// function verifyRadioBtnVertical() {
+//     if (!radioWrapperVertical) {
+//         return true;
+//     }
+
+//     const requiredRadios = Array.from(radioButtonsVertical).filter(
+//         radioBtn => radioBtn.required
+//     );
+
+//     if (requiredRadios.length === 0) {
+//         // If there are no required radios, consider it as valid.
+//         radioErrorVertical?.classList.remove('isVisible');
+//         return true;
+//     }
+
+//     const isChecked = requiredRadios.some(radioBtn => radioBtn.checked);
+
+//     if (!isChecked) {
+//         radioErrorVertical?.classList.add('isVisible');
+//         return false;
+//     } else {
+//         radioErrorVertical?.classList.remove('isVisible');
+//         return true;
+//     }
+// }
+
 function verifyRadioBtnVertical() {
-    if (!radioButtonsVertical) {
+    if (!radioWrapperVertical) {
         return true;
     }
-
-    const isChecked = Array.from(radioButtonsVertical).some(
-        radioBtn => radioBtn.checked
+    const requiredRadios = [...radioButtonsVertical].filter(
+        radioBtn => radioBtn.required
     );
+    console.log(requiredRadios, 'requiredRadios');
+    const isChecked = [...requiredRadios].some(radioBtn => radioBtn.checked);
+    console.log(isChecked, 'isChecked');
 
-    if (!isChecked) {
-        radioErrorVertical?.classList.remove('isVisible');
-        return false;
+    if (radioButtonsVertical.length === 0) {
+        // If no radio buttons exist in the form, consider it valid.
+        return true;
+    } else if (requiredRadios.length > 0) {
+        // If there are required radio buttons, check if at least one is checked.
+        if (isChecked) {
+            // Show the error message for required but not checked radio buttons.
+            radioErrorVertical.classList.add('isVisible');
+            return true;
+        } else {
+            // Hide the error message when at least one required radio button is checked.
+            radioErrorVertical.classList.remove('isVisible');
+            return false;
+        }
     } else {
-        radioErrorVertical?.classList.add('isVisible');
+        // If there are no required radio buttons, consider it valid.
+        radioErrorVertical.classList.add('isVisible');
         return true;
     }
 }
