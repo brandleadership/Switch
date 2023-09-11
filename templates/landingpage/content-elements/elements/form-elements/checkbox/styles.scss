@@ -1,0 +1,74 @@
+/* disable default checkbox display */
+
+input[type='checkbox'] {
+    display: none;
+}
+
+/* correctly align content */
+
+.checkbox-wrapper {
+    position: relative;
+}
+
+.custom-checkbox-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+/* accomodate spacing for custom checkbox in label */
+
+.custom-checkbox-container label {
+    width: calc(100% - 10px);
+    padding-left: 50px;
+    z-index: 2;
+    margin-left: -28px;
+    font-size: 13px;
+}
+
+.custom-checkbox-container label:hover {
+    cursor: pointer;
+}
+
+/* create custom checkbox frame */
+
+.custom-checkbox-container .custom-checkbox-frame {
+    background-color: white;
+    width: 28px;
+    height: 28px;
+    border: 1px solid #141e55;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* assure that checkbox is clickable (place below label) */
+    z-index: 1;
+
+    &.missing-required-field {
+        border: 1px solid red;
+    }
+}
+
+.custom-checkbox-container label:hover ~ .custom-checkbox-frame {
+    background-color: white;
+}
+
+/* create custom checkbox checked symbol */
+
+.custom-checkbox-frame::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #141e55;
+    display: none;
+    /* to assure that checkbox is clickable (place below label) also when checked */
+    z-index: 1;
+}
+
+.custom-checkbox-container input:checked ~ .custom-checkbox-frame::after {
+    display: block;
+}
+
+.custom-checkbox-container {
+    margin: 10px 0;
+}

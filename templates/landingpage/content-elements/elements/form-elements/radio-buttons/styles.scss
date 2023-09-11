@@ -1,0 +1,96 @@
+/* highlight required radiobutton sets with required star */
+.required-radiobutton-field::after {
+    content: '*';
+    color: #141e55;
+    padding-left: 5px;
+}
+/* disable default radiobutton display */
+
+input[type='radio'] {
+    display: none;
+}
+
+/* correctly align content */
+
+.custom-radiobutton-container-vertical {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+}
+.radiobutton-container-wrapper-vertical {
+    position: relative;
+}
+
+/* accomodate spacing for custom radiobutton in label */
+
+.custom-radiobutton-container-vertical label {
+    padding-left: 30px;
+
+    z-index: 2;
+    margin-left: -15px;
+}
+
+.custom-radiobutton-container-vertical label:hover {
+    cursor: pointer;
+}
+
+/* create custom radiobutton frame */
+#option-radio-group-vertical {
+    position: relative;
+}
+
+.radiobutton-set-container-vertical {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.custom-radiobutton-container-vertical:not(:last-child) {
+    margin-bottom: 30px;
+}
+.custom-radiobutton-container-vertical .custom-radiobutton-frame {
+    background-color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid #141e55;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    /* assure that radiobutton is clickable (place below label) */
+    z-index: 1;
+}
+
+.custom-radiobutton-container-vertical label:hover ~ .custom-radiobutton-frame {
+    background-color: white;
+}
+
+/* create custom radiobutton checked symbol */
+
+.custom-radiobutton-frame::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid #141e55;
+    background-color: #141e55;
+    display: none;
+    /* to assure that radiobutton is clickable (place below label) also when checked */
+    z-index: 1;
+}
+
+.custom-radiobutton-container-vertical
+    input:checked
+    ~ .custom-radiobutton-frame::after {
+    display: block;
+}
+
+.radiobutton-container-wrapper {
+    margin: 10px 0;
+}
+
+.radiobutton-container-wrapper > div > label {
+    margin-bottom: 5px;
+}

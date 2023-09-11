@@ -1,0 +1,43 @@
+<div data-bsi-element="form">
+   <section class="section-spacer">
+        <div class="content-container">
+           
+    <form data-bsi-element-part="form" class="submission-form" id="sample-form">
+        <div data-bsi-form-validation="">
+            <p data-bsi-form-validation-item=""></p>
+        </div>
+        <div data-bsi-dropzone="form-container">
+            {% include '../../elements/title-h2/template.twig' with {
+                title: 'Title lorem ipsum dolor sit amet'
+            } %}
+         
+             {% include '../../elements/formatted-text/template.twig' with {
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+            } %}
+           
+            {% include '../../elements/form-elements/full-name/template.twig' %}
+            {% include '../../elements/form-elements/radio-buttons/template.twig' %}
+            {% include '../../elements/form-elements/email/template.twig' %}
+            {% include '../../elements/form-elements/organization/template.twig' %} 
+            {# {% include '../../elements/form-elements/dropdown/template.twig' %}  #}
+             {% include '../../elements/form-elements/checkbox/template.twig' with {
+                text: properties.labels.checkbox
+            } %}
+            
+            </div>
+            <div class="form-submit-button-container" id="error-wrapper">
+                <p class="error-message-form isVisible">
+                     {{ properties.provide_required }} 
+                </p>
+               <div class="submit-buttom-container">
+                <input data-bsi-part="form-submit"
+                    class="submit-button"
+                    type="submit"
+                    value="{{properties.labels.anmelden}}" />
+            </div>
+        </div>
+    </form>
+    </div>
+   
+   </section>
+</div>

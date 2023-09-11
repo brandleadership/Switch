@@ -1,0 +1,13 @@
+<div data-bsi-element="body-text" class="formatted-text-main-container">
+    <div class="formatted-text-content-container"
+        data-bsi-element-part="formatted-text">
+        {% if text is defined and text %}
+            {{ text|raw }}
+        {% else %}
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+        {% endif %}
+    </div>
+</div>

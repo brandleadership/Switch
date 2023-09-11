@@ -1,0 +1,15 @@
+.footer-link-container {
+}
+
+.footer-link {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.footer-link::before {
+    content: '|';
+    padding: 0 5px;
+    color: #ccc;
+}

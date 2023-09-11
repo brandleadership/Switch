@@ -1,0 +1,20 @@
+.button-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 30px;
+    margin-top: 50px;
+}
+
+.button-blue {
+    text-decoration: none;
+    padding: 10px 18px;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 2px;
+    color: var(--white);
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+    border-radius: 200px;
+}

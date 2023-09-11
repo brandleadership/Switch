@@ -1,0 +1,57 @@
+<div data-bsi-element="footer" class="footer-container">
+    <div class="container">
+        <div class="inner_footer-wrapper">
+            <div class="footer-logo-address-wrapper">
+                <div class="footer-logo-wrapper">
+                    <div class="footer-logo">
+                    <a data-bsi-element-part="image" href="https://www.switch.ch/">
+                    <img alt="Switch Logo"
+                            src="{{
+                            bsi_cx_asset(
+                                '../../../../../resources/images/logo-white.svg'
+                            )
+                            }}"
+                            width="148" />
+                            </a>
+                    </div>
+                </div>
+                <div class="footer-address-box"
+                    data-bsi-dropzone="footer-address"
+                    data-bsi-dropzone-allowed-elements="footer-address">
+                    {% include '../../elements/footer-address/template.twig' with {
+                        text: 'Zürich
+                        Werdstrasse 2
+                        8004 Zürich',
+                        _href: "[mailto:info@switch.ch]"
+                    } %}
+                    {% include '../../elements/footer-address/template.twig' with {
+                       
+                        text: 'Lausanne
+                        EPFL Innovation Park Building I,
+                        1015 Lausanne',
+                        _href: "[mailto:info@switch.ch]"
+                    }%}
+                </div>
+            </div>
+            <div class="footer-links-wrapper"
+                data-bsi-dropzone="footer-links"
+                data-bsi-dropzone-allowed-elements="footer-link body-text">
+                {% include '../../elements/footer-copyright/template.twig' with {
+                    text: properties.footer.year
+                } %}
+                {% include '../../elements/footer-link/template.twig' with {
+                    href: '[Rechtliches]',
+                    link_text: properties.footer.rechtliches
+                } %}
+                {% include '../../elements/footer-link/template.twig' with {
+                    href: '[Impressum]',
+                    link_text: properties.footer.impressum
+                } %}
+                {% include '../../elements/footer-link/template.twig' with {
+                    href: '[Datenschutz]',
+                    link_text: properties.footer.datenschutz
+                } %}
+            </div>
+        </div>
+    </div>
+</div>
