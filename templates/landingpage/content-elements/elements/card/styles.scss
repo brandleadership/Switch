@@ -1,0 +1,45 @@
+.card {
+    flex: 1;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+.card:not(:last-child) {
+    margin-right: 24px;
+}
+
+.card h2 {
+    color: var(--primary);
+    font-style: normal;
+    font-weight: 500;
+    margin: 15px 0;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card .description {
+    color: var(--primary);
+    font-size: 16px;
+    margin-bottom: 15px;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+@media screen and (max-width: 768px) {
+    .card:not(:last-child) {
+        margin-bottom: 24px;
+        margin-right: 0;
+    }
+}

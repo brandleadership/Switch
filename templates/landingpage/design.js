@@ -25,7 +25,8 @@ module.exports = cx.design
                 require('./content-elements/sections/form'),
                 require('./content-elements/sections/agenda-table'),
                 require('./content-elements/sections/info-table'),
-                require('./content-elements/sections/section-title-text')
+                require('./content-elements/sections/section-title-text'),
+                require('./content-elements/sections/cards')
             ),
         cx.contentElementGroup
             .withGroupId('elements')
@@ -47,7 +48,9 @@ module.exports = cx.design
                 require('./content-elements/elements/full-width-image'),
                 require('./content-elements/elements/divider'),
                 require('./content-elements/elements/info-ort-element'),
-                require('./content-elements/elements/info-date-element')
+                require('./content-elements/elements/info-date-element'),
+                require('./content-elements/elements/card'),
+                require('./content-elements/elements/three-cards')
             ),
         cx.contentElementGroup
             .withGroupId('form-elements')
@@ -85,7 +88,8 @@ module.exports = cx.design
                 require('./content-elements/sections/info-table'),
                 require('./content-elements/elements/full-width-image'),
                 require('./content-elements/elements/divider'),
-                require('./content-elements/sections/section-title-text')
+                require('./content-elements/sections/section-title-text'),
+                require('./content-elements/sections/cards')
             ),
         cx.dropzone
             .withDropzone('footer')

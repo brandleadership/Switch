@@ -64,4 +64,7 @@ module.exports = cx.htmlEditorConfig
         72
     )
     .withFontSizeDefault(16)
-    .withLineHeights(1.1, 1.15, 1.5, 2);
+    .withLineHeights(1.1, 1.15, 1.5, 2)
+    .withTextColors('#002864', '#6ec8e1', '#ffffff', '#666666', '#000000')
+    .withFontSizes(8, 9, 10, 11, 12, 14, 16, 18, 24, 30, 36, 48, 72)
+    .withEnterMode(EnterMode.BR);
