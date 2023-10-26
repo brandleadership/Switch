@@ -11,3 +11,8 @@ module.exports = cx.contentElement
         cx.part.plainText.withLabel('Card Title'),
         cx.part.formattedText.withLabel('Card Text')
     );
+// .withDropzones(
+//     cx.dropzone
+//         .withDropzone('socials-zone')
+//         .withAllowedElements(require('../socials-in-card'))
+// );

@@ -50,7 +50,8 @@ module.exports = cx.design
                 require('./content-elements/elements/info-ort-element'),
                 require('./content-elements/elements/info-date-element'),
                 require('./content-elements/elements/card'),
-                require('./content-elements/elements/three-cards')
+                require('./content-elements/elements/three-cards'),
+                require('./content-elements/elements/socials-in-card')
             ),
         cx.contentElementGroup
             .withGroupId('form-elements')
