@@ -9,5 +9,6 @@ module.exports = cx.contentElement
     .withDropzones(
         cx.dropzone
             .withDropzone('three-cards-zone')
+            .withMaxAllowedElements(3)
             .withAllowedElements(require('../card'))
     );

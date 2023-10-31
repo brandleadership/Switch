@@ -4,7 +4,7 @@
             <div class="footer-logo-address-wrapper">
                 <div class="footer-logo-wrapper">
                     <div class="footer-logo">
-                    <a data-bsi-element-part="image" href="https://www.switch.ch/">
+                    <a data-bsi-element-part="image" href="https://www.switch.ch/" target="_blank">
                     <img alt="Switch Logo"
                             src="{{
                             bsi_cx_asset(
@@ -19,17 +19,17 @@
                     data-bsi-dropzone="footer-address"
                     data-bsi-dropzone-allowed-elements="footer-address">
                     {% include '../../elements/footer-address/template.twig' with {
-                        text: 'Zürich
-                        Werdstrasse 2
+                        text: 'Zürich <br/>
+                        Werdstrasse 2 <br/>
                         8004 Zürich',
-                        _href: "[mailto:info@switch.ch]"
+                        _href: "mailto:info@switch.ch"
                     } %}
                     {% include '../../elements/footer-address/template.twig' with {
                        
-                        text: 'Lausanne
-                        EPFL Innovation Park Building I,
+                        text: 'Lausanne <br/>
+                        EPFL Innovation Park Building I, <br/>
                         1015 Lausanne',
-                        _href: "[mailto:info@switch.ch]"
+                        _href: "mailto:info@switch.ch"
                     }%}
                 </div>
             </div>
